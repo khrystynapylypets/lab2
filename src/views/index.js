@@ -11,8 +11,8 @@ export const ClassificationMethodView = () => {
   const class2Neurons = getNeuronsFromData(class2Data, classNames[1]);
   const class3Neurons = getNeuronsFromData(class3Data, classNames[2]);
 
-  const vector = [6.1, 2.6, 5.6, 1.4];
-  const sigma = 0.5;
+  const vector = [ 1, 1, 1, 3 ];
+  const sigma = 0.7;
 
   const { R1, R2, R3, D1, D2, D3, p1, p2, p3, inputNeuron } = findResultClass(
     vector, sigma, classNames, { class1Neurons, class2Neurons, class3Neurons }

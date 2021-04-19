@@ -58,14 +58,14 @@ export const findResultClass = (vector, sigma, classNames, classData ) => {
   const { class1Neurons, class2Neurons, class3Neurons } = classData;
 
   const
-    R1 = [...calculateR(class1Neurons, inputNeuron)],
-    R2 = [...calculateR(class2Neurons, inputNeuron)],
-    R3 = [...calculateR(class3Neurons, inputNeuron)];
+    R1 = calculateR(class1Neurons, inputNeuron),
+    R2 = calculateR(class2Neurons, inputNeuron),
+    R3 = calculateR(class3Neurons, inputNeuron);
 
   const
-    D1 = [...calculateD(R1, sigma)],
-    D2 = [...calculateD(R2, sigma)],
-    D3 = [...calculateD(R3, sigma)];
+    D1 = calculateD(R1, sigma),
+    D2 = calculateD(R2, sigma),
+    D3 = calculateD(R3, sigma);
 
   const
     sumD1 = calculateDSum(D1),
